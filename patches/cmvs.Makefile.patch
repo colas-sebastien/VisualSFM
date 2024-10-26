@@ -1,0 +1,23 @@
+--- Makefile	2024-10-24 09:17:28.944615092 +0200
++++ Makefile.ok	2024-10-24 09:20:01.286427114 +0200
+@@ -7,14 +7,14 @@
+ ######################################################################
+ CXX = g++
+ 
+-Your INCLUDE path (e.g., -I/usr/include)
+-YOUR_INCLUDE_PATH =
++#Your INCLUDE path (e.g., -I/usr/include)
++YOUR_INCLUDE_PATH = -I../../../CLAPACK/
+ 
+-Your metis directory (contains header files under graclus1.2/metisLib/)
+-YOUR_INCLUDE_METIS_PATH =
++#Your metis directory (contains header files under graclus1.2/metisLib/)
++YOUR_INCLUDE_METIS_PATH = -I../../../graclus1.2/metisLib
+ 
+-Your LDLIBRARY path (e.g., -L/usr/lib)
+-YOUR_LDLIB_PATH =
++#Your LDLIBRARY path (e.g., -L/usr/lib)
++YOUR_LDLIB_PATH = -L../../../graclus1.2
+ 
+ ######################################################################
+ CXXFLAGS_PMVS = -O2 -Wall -Wno-deprecated ${YOUR_INCLUDE_PATH}

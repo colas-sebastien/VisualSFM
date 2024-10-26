@@ -1,0 +1,11 @@
+--- makefile	2013-08-25 09:08:01.000000000 +0200
++++ makefile.ok	2024-10-21 23:28:26.613216183 +0200
+@@ -32,7 +32,7 @@
+ GTK_LIBS = $(shell $(PKG_CONFIG) --libs gtk+-2.0 gthread-2.0)
+ 
+ LIB_LIST +=  -pthread -lGL -lGLU -lX11 -ldl $(GTK_LIBS) $(LIB_DIR)/lapack.a \
+-			$(LIB_DIR)/blas.a $(LIB_DIR)/libf2c.a $(LIB_DIR)/libjpeg.a 
++			$(LIB_DIR)/blas.a $(LIB_DIR)/libf2c.a $(LIB_DIR)/libjpeg.a -no-pie
+ 
+ all:  makepath VisualSFM 
+  
